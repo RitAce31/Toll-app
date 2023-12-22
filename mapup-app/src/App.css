@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{ margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif;}
+.App{
+  overflow-y: scroll;
+}
+.flex { 
+  display: flex;
+}
+.row { flex-direction: row;}
+.column { flex-direction: column;}
+.main { height: 80vh; width: 100%;}
+.left { height: 100%; width: 50%; border: 1px solid black; align-items: flex-start; padding: 15px; color: black; font-weight: bold;}
+.right { height: 100%; width: 50%; border: 1px solid black;}
+.custom-textbox {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.custom-textbox::placeholder {
+  color: grey;
+}
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  color: #3498db;
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.custom-dropdown:hover .dropdown-content {
+  display: block;
+}
+[class^="optional-label"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #3498db;
+  border-radius: 5px;
+  color: #3498db;
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+[class^="optional-label"]:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.button-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.symbol {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.map-des { height: 100%; width: 100%;}
+.leaflet-container { height: 100%; width: 100%;}
+
+.input-div{
+  width: 80%;
+  margin-bottom: 15px;
+}
+.input-div label { font-size: 18px; font-weight: 600; margin: 10px 0; color: black;}
+.input-div select { width: 100%; }
+.input-div select option { padding: 5px; font-size:18px; font-weight: bold;}
+.button{
+  margin-bottom: 15px;
+  width: 50%;
+}
+.dropdown-li {
+  max-height: 50vh;
+  overflow-y: scroll;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.dropdown-li  li{
+  background-color: white;
+  cursor: pointer;
+  padding: 10px 10px;
+  width: 100%;
+}
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+}
+
+/* Style the options */
+option {
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Style when select is focused */
+select:focus {
+  outline: none;
+  border-color: #007bff; /* Change the border color when focused */
+}
+
+/* Style when select is hovered */
+select:hover {
+  border-color: #0056b3; /* Change the border color when hovered */
+}
+.result-li {
+  width: 100%;
+  border: 1px solid black;
+  margin: 5px;
+}
+.result-li li {
+  padding: 5px;
+}
+.header {width: 100%; margin : 10px}
+.header h1,p { padding : 10px 40px}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
